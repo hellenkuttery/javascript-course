@@ -59,3 +59,25 @@ console.log(isActive);
 console.log(typeof isActive);
 
 let job=null // null typeof ile gelen bir deği. ama primitive tiplerden olarak ele alınıyor
+
+// REFERENCE TYPE değişkenler : Array, Object tip olarak object iken function- function döner.
+//------- ARRAY -----
+let names=["Hellen","Perry","Katty"]
+console.log(names)
+console.log(typeof names)
+
+// ------------OBJECT-------------
+let address={
+    city:"Ankara",
+    country:"Turkey"
+}
+console.log(address)
+console.log(typeof address)
+
+// -------------FUNCTION-----------
+
+var calculateAge=function(){
+    return 30;
+}
+
+console.log(typeof calculateAge)
