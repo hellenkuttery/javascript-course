@@ -81,3 +81,48 @@ var calculateAge=function(){
 }
 
 console.log(typeof calculateAge)
+
+// ---- TIP DONUŞUMLERİ------------
+// string bir değişkeni Number değişkenine dönüştürme
+let num1="20";
+let num2="10";
+console.log(num1+num2)
+console.log(typeof num1)
+
+let num3=Number(num1)
+let num4=Number(num2)
+console.log(num3+num4)
+console.log(typeof num3)
+
+// Number değişkenini Stringe dönüştürme 2 yöntem String(variable) 2. variable.toString
+let val
+val=String(10)
+console.log(val)
+console.log(typeof val)
+// toString
+let val1=25
+val2=val1.toString()
+console.log(typeof val2)
+// -- date
+
+let myDate=new Date()
+console.log(myDate)
+console.log(myDate.getFullYear())
+
+//   NOTES ---------
+
+let myValue
+myValue=Number(true) // 1 e karşılık gelir
+myValue=Number(false)  // 0 a karşılık gelir
+myValue=Number(null)   //  0 
+myValue=Number("a")     // NaN Not a number 
+myValue=Number([1,2,3])   // NaN 
+
+console.log(myValue)
+
+//  PARSEINT & PARSEFLOAT
+
+myValue=parseInt(10.55)
+console.log(myValue)
+myValue=parseFloat(10.55)
+console.log(myValue)
