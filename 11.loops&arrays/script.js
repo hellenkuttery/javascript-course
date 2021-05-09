@@ -42,3 +42,12 @@ let mynewArray=people.map(function(item){
     return item.firstname+" "+item.lastname
 })
 console.log(mynewArray)
+
+// ----
+let numbers=[2,4,6,7,9]
+
+let square=numbers.map(function(item){
+    return item*item
+})
+
+console.log(square)
