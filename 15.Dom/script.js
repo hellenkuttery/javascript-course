@@ -1,4 +1,4 @@
-// Document Object Model i anlamak
+// Document Object Model i anlamak ** Bu kısım müthiş derecede önemli ----
 
 let val;
 
@@ -28,7 +28,7 @@ elem.onmouseout=function(){
 };
 console.log(elem)
 
-// Selecting multiple  ELements
+// Selecting Single ELements -querySelector
 document.querySelector(".content1").innerHTML="hello"
 document.querySelector(".content2").innerHTML="I learnt everything about Javascript"
 
@@ -39,3 +39,43 @@ function myfunction(){
     mytext.style.fontSize="40px"
     
 }
+
+document.querySelector("li:nth-child(1)").style.color="pink"
+
+document.querySelector(".content2").classList.add("text-success")
+document.querySelector(".content2").classList.add("border")
+
+// Selecting Multiple ELements -querySelector
+
+let mul=document.getElementsByClassName("list-group-item")[2]
+
+document.querySelector(".text").innerHTML=mul
+
+// Selecting by GetElementByTagName
+
+let tagname=document.getElementsByTagName("li")
+console.log(tagname)
+
+// Selecting queryselectorall
+let first=document.querySelector(".alt")
+console.log(first)
+let quer=first.querySelectorAll("li")
+console.log(quer)
+
+quer.forEach(function (item){
+    item.style.backgroundColor="pink"
+})
+
+let chil=first.childNodes
+chil=first.childNodes[2]
+
+chil=first.children[2].textContent="my new item"
+console.log(chil)
+
+let newVal=first.firstElementChild
+console.log(newVal)
+
+newVal.textContent="new Item change"
+
+
+
