@@ -55,5 +55,16 @@ Teacher.prototype.sayBranch=function(){
 function Headmaster(name,branch,staffWork){
     Teacher.call(this,name,branch)
     this.staffWork=staffWork;
-
 }
+
+Headmaster.prototype=Object.create(Teacher.prototype)
+Headmaster.prototype.constructor=Headmaster;
+
+Headmaster.prototype.shareTask= function(){
+    console.log("I have already sent the work")
+}
+
+let h1=new Headmaster("Headmaster","math","work_finished")
+h1.Introduce();
+h1.sayBranch();
+h1.shareTask();
