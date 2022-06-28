@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container bg-secondary">
+        <h1 class="display-5">Countries</h1>
+      <div class="row"> </div>
+    </div>
+
+    <script>
+           //api
+      function displayCountry(){
+   
+         const request = new XMLHttpRequest();
+           request.open("GET", "https://restcountries.com/v3.1/all");
+           request.send();
+           request.addEventListener("load", function () {
+             const data = JSON.parse(this.responseText);
+             console.log("data",data)
+             setCountry(data);           
+           })
+         
+      }
+    
+
+     function setCountry(data) {
+        data.map((data)=>{
+
+            const html = `
+            
+              <div class="card m-2 p-2 mb-4  border border-2 border-warning " style="width: 18rem;">
+              <img class="card-img-top" src=${data.flags.png} alt="Card image cap">
+              <div class="card-body">
+              <h5 class="card-title">${data.name.common}</h5>
+              <p class="card-text">Population: ${data.population}</p>
+              <a href="#" class="btn btn-primary">Details</a>
+              </div>
+          `;
+          document.querySelector(".container .row").insertAdjacentHTML("beforeEnd",html)
+        })
+             
+           };
+
+           displayCountry();
+    
+
+    </script>
+  </body>
+</html>

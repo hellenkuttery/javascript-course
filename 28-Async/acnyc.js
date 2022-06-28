@@ -26,5 +26,4 @@ const OtherCallback=(job,phone,call)=>{
 const jobDesc=OtherCallback("engineer",3452333245,call=>{ 
     console.log(call.job,call.phone)
 })
-
 console.log("stop");
